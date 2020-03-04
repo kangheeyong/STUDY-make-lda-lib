@@ -1,7 +1,9 @@
+# cython: profile=True
 
-# calc_pi.pyx
+cimport cython
 
-cdef inline double recip_square(int i):
+@cython.profile(False)
+cdef double recip_square(int i):
     return 1. / i ** 2
 
 
